@@ -22,6 +22,8 @@ body {
     margin-right: 30px;
     line-height: 70px;
     font-size: 1.8rem;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .centerImg {

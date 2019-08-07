@@ -25,12 +25,26 @@
             </div>
             <div class = "p-2">
                 <div class = "d-flex justify-content-center">
-                    <button class = "btn btn-primary btn-circle btn-circle-xl">1</button>
-                    <button class = "btn btn-primary btn-circle btn-circle-xl">2</button>
-                    <button class = "btn btn-primary btn-circle btn-circle-xl">3</button>
-                    <button class = "btn btn-primary btn-circle btn-circle-xl">4</button>
+                    <button class = "btn btn-primary btn-circle btn-circle-xl" onclick = "goToOne()">1</button>
+                    <button class = "btn btn-primary btn-circle btn-circle-xl" onclick = "goToTwo()">2</button>
+                    <button class = "btn btn-primary btn-circle btn-circle-xl" onclick = "goToThree()">3</button>
+                    <button class = "btn btn-primary btn-circle btn-circle-xl" onclick = "goToFour()">4</button>
                 </div>
             </div>
         </div>
     </body>
+    <script>
+        function goToOne(){
+            location.href = "stationOne.html";
+        }
+        function goToTwo(){
+            location.href = "stationTwo.html";
+        }
+        function goToThree(){
+            location.href = "stationThree.html";
+        }
+        function goToFour(){
+            location.href = "stationFour.html";
+        }
+    </script>
 </html>
