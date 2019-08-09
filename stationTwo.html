@@ -12,8 +12,35 @@
         <link rel="stylesheet" type  = "text/css" href = "style.css">
     </head>
     <body>
-        <p>
-            this is station two
-        </p>
+        <div class = "d-flex flex-column vertical-center">
+            <div class = "d-flex flex-row rowHeight">
+                <div class = "p-2 imgDiv">
+                    <img src = "icon_nobg.png" class = "stationImg" onclick = "goToHome()">
+                </div>
+                <div class = "p-2 title">
+                    <p>I'm feeling homesick...</p>
+                </div>
+            </div>
+            <div class = "p-2">
+                <p class = "bodyParagraph">
+                    <br>
+                    I've been stuck here for so long that reality seems more and more like a figment of the past to me... Oh! I know! Let's 
+                    make something for those back home waiting for us! I can even play some chill lo-fi beats while we do it!
+
+                    <br>
+                    <br>
+
+                    <strong>YOUR TASK:</strong> Write a message for a loved one
+                    on a piece of origami paper, then follow the instructions to fold a paper heart!
+                </p>
+            </div>
+
+        </div>
     </body>
+
+    <script>
+        goToHome = function() {
+            location.href = "index.html";
+        }
+    </script>
 </html>

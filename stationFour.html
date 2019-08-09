@@ -12,8 +12,41 @@
         <link rel="stylesheet" type  = "text/css" href = "style.css">
     </head>
     <body>
-        <p>
-            this is station four
-        </p>
+        <div class = "d-flex flex-column vertical-center">
+            <div class = "d-flex flex-row rowHeight">
+                <div class = "p-2 imgDiv">
+                    <img src = "icon_nobg.png" class = "stationImg" onclick = "goToHome()">
+                </div>
+                <div class = "p-2 title">
+                    <p>It was a trap!</p>
+                </div>
+            </div>
+            <div class = "p-2">
+                <p class = "bodyParagraph">
+                    <br>
+                    Well... not exactly. In one of these boxes is a USB which will help me hack into the mainframe and hopefully
+                    get us out of the virtual realm. The people stuck here before have
+                    hid it here so that the guards don't find it. All we have is this clue that they left and the pieces
+                    scattered around this room -- it's up to you to get us out of here!
+
+                    <br>
+                    <br>
+
+                    <strong>YOUR TASK:</strong> Retrieve the USB locked in one of the boxes and get out of here!
+
+                    <br>
+                    <br>
+
+                    <strong>CLUE:</strong> Jesus was human -- He too, had emotions like us. Look to John for proof.
+                </p>
+            </div>
+
+        </div>
     </body>
+
+    <script>
+        goToHome = function() {
+            location.href = "index.html";
+        }
+    </script>
 </html>
