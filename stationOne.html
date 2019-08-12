@@ -5,11 +5,12 @@
             Welcome to LT's ARG...are you ready?
         </title>
         <meta charset="utf-8">
-        <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+        <meta name=”viewport” content=”width=device-width, initial-scale=0.41, maximum-scale=1″>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <link rel="stylesheet" type  = "text/css" href = "style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <div class = "d-flex flex-column vertical-center">
@@ -18,21 +19,57 @@
                     <img src = "icon_nobg.png" class = "stationImg" onclick = "goToHome()">
                 </div>
                 <div class = "p-2 title">
-                    <p>Reach for the skies!</p>
+                    <p>It was a trap!</p>
                 </div>
             </div>
             <div class = "p-2">
                 <p class = "bodyParagraph">
                     <br>
-                    In order to get back to reality, we need to build a beacon of sorts to communicate to people outside of this virtual realm.
-                    It looks like we have only have a certain amount of materials to build this tower. Although, maybe we could improve on
-                    other people's towers or use some of their materials? It wouldn't hurt, right?
+                    Well... not exactly. In one of these boxes is a three number code which will help me hack into the mainframe and hopefully
+                    get us out of the virtual realm. The people stuck here before have
+                    hid it here so that the guards don't find it. Once you get the code, please put it in the answer box below.
+                    All we have is this clue that they left and the pieces
+                    scattered around this room -- it's up to you to get us out of here.
+                    <br>
+                    <br>
+
+                    <strong>YOUR TASK:</strong> Retrieve the USB locked in one of the boxes and get out of here!
+                    <br>
+                    <strong>LOCATION:</strong> Chapel Classroom Downstairs
 
                     <br>
                     <br>
 
-                    <strong>YOUR TASK:</strong> Build the tallest tower you can in the given time with the given materials! All the materials allotted to 
-                    to your team can be found in front of you. No rules against using other team's materials. GO!
+                    <strong>CLUE:</strong> Jesus was human and had emotions just like us. Look to John for an account of when he wept.
+
+                    <br>
+                    <br>
+
+                    <strong>INSTRUCTIONS FOR THE LOCKS:</strong> 
+                    <br>
+                    For the combination lock, twist the numbers so that your combination lines up with the two markers on top and bottom.
+                    Pull firmly to unlock.
+                    <br>
+                    For the directional lock, PUSH DOWN the shackle TWICE before attempting the combination. This will reset the lock. Pull on the 
+                    shackle firmly to unlock.
+                    <br>
+                </p>
+            </div>
+            <div class = "p-2 codeForm">
+                <form action = "javascript:checkCode();">
+                    CODE:<br>
+                    <input type="text" name="code" id = "answer" value=""><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class = "p-2 codeForm" id = "resultGood">
+                <p>
+                    YES! That's the code! 
+                </p>
+            </div>
+            <div class = "p-2 codeForm" id = "resultBad">
+                <p>
+                    That didn't work :( Please try again!
                 </p>
             </div>
 
@@ -40,8 +77,24 @@
     </body>
 
     <script>
+        $(document).ready(function(){
+            $("#resultGood").hide();
+            $("#resultBad").hide();
+        });
+
         goToHome = function() {
             location.href = "index.html";
+        }
+
+        checkCode = function() {
+            if($("#answer").val() == "131"){
+                $("#resultGood").show();
+                $("#resultBad").hide();
+            }
+            else{
+                $("#resultBad").show();
+                $("#resultGood").hide();
+            }
         }
     </script>
 </html>
